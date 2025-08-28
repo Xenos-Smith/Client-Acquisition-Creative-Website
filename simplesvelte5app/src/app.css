@@ -2,3 +2,15 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@theme {
+  --color-soft: oklch(22.69% 0.1246 257.6);
+  --color-accent: oklch(76.24% 0.2855 329.6);
+  --color-medium: oklch(84.42% 0.081 251.6);
+
+  --color-h1-dark: oklch(21.49% 0 0);
+  --color-text-dark: oklch(33.5% 0 0);
+  --color-legaldark: oklch(67.7% 0 0);
+  --color-h1-white: oklch(100% 0 0);
+  --color-text-white: oklch(100% 0 0);
+  --color-legal-white: oklch(21.49% 0 0);
+}

@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div class="min-h-screen min-w-full flex justify-center items-center">
-	<div class="min-h-screen max-w-2xs flex flex-col justify-center items-center">
+	<div class="min-h-screen max-w-sm flex flex-col justify-center items-center">
 		{@render children?.()}
 	</div>
 </div>
