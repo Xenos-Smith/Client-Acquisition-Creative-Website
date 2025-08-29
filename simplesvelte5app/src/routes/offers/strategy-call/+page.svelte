@@ -1,3 +1,5 @@
-<h1>Hey now</h1>
-<p>f</p>
+<script>
+    import Hero from './Hero.svelte'
+</script>
 
+<Hero />

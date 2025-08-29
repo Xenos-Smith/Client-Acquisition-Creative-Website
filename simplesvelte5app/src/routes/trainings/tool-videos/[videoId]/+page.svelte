@@ -53,7 +53,7 @@
         title: "Email Marketing Problems...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Pîeces Vid", url: "/trainings/funnel-pieces-video" },
+            { name: "Pieces Vid", url: "/trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/email-problems.pdf" },
         ],
         },

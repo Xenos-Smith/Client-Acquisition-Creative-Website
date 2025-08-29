@@ -3,14 +3,14 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --color-soft: rgb(240, 248, 255);
-  --color-accent: rgb(13, 59, 102);
-  --color-medium: rgb(162, 207, 254);
+	--color-soft: rgb(240, 248, 255);
+	--color-accent: rgb(13, 59, 102);
+	--color-medium: rgb(162, 207, 254);
 
-  --color-h1-dark: oklch(21.49% 0 0);
-  --color-text-dark: oklch(33.5% 0 0);
-  --color-legaldark: oklch(67.7% 0 0);
-  --color-h1-white: oklch(100% 0 0);
-  --color-text-white: oklch(100% 0 0);
-  --color-legal-white: oklch(21.49% 0 0);
+	--color-h1-dark: oklch(21.49% 0 0);
+	--color-text-dark: oklch(33.5% 0 0);
+	--color-legaldark: oklch(67.7% 0 0);
+	--color-h1-white: oklch(100% 0 0);
+	--color-text-white: oklch(100% 0 0);
+	--color-legal-white: oklch(21.49% 0 0);
 }
