@@ -2,8 +2,6 @@
     // Import video data (simulating a database)
     export let data; // Provided by SvelteKit's load function
 
-    const strategyCallUrl = "/offers/strategy-call";
-
     // Sample video data array (replace with your actual database or API call)
     const videos = [
         {
@@ -21,9 +19,7 @@
         title: "Getting Affiliates...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
-            { name: "Video Script", url: "/pdfs/scripts/getting-affiliates.pdf" },
+            { name: "Script + Sequences", url: "/pdfs/scripts/getting-affiliates.pdf" },
         ],
         },
         {
@@ -31,8 +27,7 @@
         title: "Getting More Leads Per Month",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/monthly-leads.pdf" },
         ],
         },
@@ -41,8 +36,6 @@
         title: "Increasing Lead Magnet Conversions...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
             { name: "Video Script", url: "/pdfs/scripts/lead-magnet-cvr.pdf" },
         ],
         },
@@ -51,8 +44,7 @@
         title: "Why You Should Have a Post Opt-In Sale...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/sale-after-optin.pdf" },
         ],
         },
@@ -61,8 +53,7 @@
         title: "Email Marketing Problems...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "Pîeces Vid", url: "/trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/email-problems.pdf" },
         ],
         },
@@ -71,8 +62,7 @@
         title: "Sales Page Problems?",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "Sales Page Guide", url: "/pdfs/scripts/sales-page-guide.pdf" },
             { name: "Video Script", url: "/pdfs/scripts/sales-page.pdf" },
         ],
         },
@@ -81,8 +71,7 @@
         title: "Decreasing Email Warmup Unsubscribe Percentage...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/email-unsub.pdf" },
         ],
         },
@@ -91,8 +80,7 @@
         title: "SMS Marketing Problems...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/sms-marketing.pdf" },
         ],
         },
@@ -101,8 +89,7 @@
         title: "Increasing Call Show Up Rate...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/show-ups.pdf" },
         ],
         },
@@ -111,8 +98,6 @@
         title: "Increasing Close Rate...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
             { name: "Video Script", url: "/pdfs/scripts/close-rates.pdf" },
         ],
         },
@@ -121,8 +106,7 @@
         title: "Increasing Prospect Retention...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "ICP 2", url: "/pdfs/scripts/editable_ICP_2.pdf" },
-            { name: "Guide 2", url: "/pdfs/scripts/guide_2.pdf" },
+            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/prospect-retention.pdf" },
         ],
         },
@@ -143,27 +127,6 @@
     allowfullscreen
   ></iframe>
 </div>
-<a
-  href={strategyCallUrl}
-  class="inline-flex items-center justify-center p-5 text-3xl sm:text-2xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium"
->
-  <span class="w-full">CHECK OUT FREE STRATEGY CALL</span>
-  <svg
-    class="w-4 h-4 ms-2 rtl:rotate-180"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 14 10"
-  >
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="3"
-      d="M1 5h12m0 0L9 1m4 4L9 9"
-    />
-  </svg>
-</a>
 <div class="w-full container grid justify-items-stretch grid-flow-col grid-rows-2 gap-4">
   {#each video.resources as resource}
     <a
