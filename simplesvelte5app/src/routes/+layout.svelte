@@ -12,6 +12,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<div class="h-fit w-fit overscroll-none"></div>
+
 {@render children?.()}
 <footer class="relative flex items-center justify-center overflow-hidden bg-medium">
 	<div
