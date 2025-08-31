@@ -1,15 +1,17 @@
 <script lang="ts">
     import '$lib/../app.css';
+    import * as rive from '@rive-app/canvas';
     import { Heading, P, Mark } from "flowbite-svelte";
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
+    import Carousel from './Carousel.svelte';
 
     // Define runes
     let scrollY = $state(0);
     let offsetTop = $state(0);
     let innerHeight = $state(0);
-    let sectionRef: HTMLSectionElement | null = null;
+    let sectionRef: HTMLElement | null = null; // Changed from HTMLSectionElement to HTMLElement
 
     // Derived progress (in vh units scrolled into the section)
     let progress = $derived(Math.max(0, (scrollY - offsetTop) / innerHeight));
@@ -57,7 +59,7 @@
         bottom: 0;
         width: 10px;
         height: 10px;
-        background: #000; /* Match bg-accent */
+        background: var(--color-accent); /* Match bg-accent */
         z-index: 1; /* Below circles */
     }
 
@@ -92,7 +94,7 @@
     /* Update pseudo-element colors on hover to match hover:bg-medium */
     .custom:hover:before,
     .custom:hover:after {
-        background: var(--medium, #cbd5e0); /* Match hover:bg-medium */
+        background: var(--color-medium, #cbd5e0); /* Match hover:bg-medium */
     }
 
     /* Circles remain the same to match background */
@@ -103,8 +105,13 @@
 </style>
 
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
-    <div class="sticky h-[100vh] top-10 z-10">
-        <div class="p-8 text-left justify-left items-top flex flex-col">
+    <div class="sticky h-[100vh] top-0 z-10">
+        <div class="absolute bg-fixed h-[100%] top-0">
+            <div class="w-[10vw] h-[100%] bg-black">
+                
+            </div>
+        </div>
+        <div class="p-8 pt-18 text-left justify-left items-top flex flex-col">
             <!-- First element: visible when progress < 1 (first 100vh) -->
             {#if progress < 1}
             <div
@@ -126,7 +133,7 @@
             {/if} 
             <a
                 href="../../../offers/strategy-call"
-                class="rounded-t-[10px] custom absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
+                class="rounded-t-[10px] custom absolute bottom-[-43px] left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
             >
                 <span class="italic w-full py-5 px-30 p-4">
                 BOOK FREE STRATEGY CALL
