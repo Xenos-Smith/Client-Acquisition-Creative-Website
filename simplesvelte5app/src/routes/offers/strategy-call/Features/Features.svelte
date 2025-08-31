@@ -126,7 +126,7 @@
             {/if} 
             <a
                 href="../../../offers/strategy-call"
-                class="rounded-t-[10px] mb-[12px] custom absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
+                class="rounded-t-[10px] custom absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
             >
                 <span class="italic w-full py-5 px-30 p-4">
                 BOOK FREE STRATEGY CALL

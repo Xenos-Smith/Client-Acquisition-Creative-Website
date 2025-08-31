@@ -69,7 +69,7 @@
   });
 </script>
 
-<div class="relative min-h-[200vh] videosection flex justify-center z-[10]" bind:this={videoSection}>
+<div class="relative min-h-[200vh] videosection flex justify-center z-[10] w-[97vw]" bind:this={videoSection}>
   <div class="videowrapper sticky top-0 w-full h-[100vh]" bind:this={videoWrapper}>
     <iframe
       class="absolute w-[calc(100vh*var(--aspect-ratio,1.777))] h-full object-cover will-change-transform z-0"
