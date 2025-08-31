@@ -4,6 +4,7 @@
 	import logo from '$lib/assets/logo.svg';
 	import logotype from '$lib/assets/logotype.svg';
 	import logotypepng from '$lib/assets/logotypeimg.png';
+	import CustomCursor from './CustomCursor.svelte';
 
 	let { children } = $props();
 </script>
@@ -14,6 +15,7 @@
 
 <div class="h-fit w-fit overscroll-none"></div>
 
+<CustomCursor />
 {@render children?.()}
 <footer class="relative flex items-center justify-center overflow-hidden bg-medium">
 	<div

@@ -14,3 +14,59 @@
 	--color-text-white: oklch(100% 0 0);
 	--color-legal-white: oklch(21.49% 0 0);
 }
+
+
+/* Base cursor styles */
+.cursor {
+	pointer-events: none;
+	@apply transition-all duration-200 ease-out;
+}
+
+/* Hover state for both cursors (.hoverable elements) */
+.cursor-hover {
+	@apply scale-125 border-accent bg-medium;
+}
+
+/* Clicked state for both cursors */
+.cursor-clicked {
+	@apply scale-90 bg-medium border-accent;
+}
+
+/* Text cursor state (e.g., input, textarea) */
+.cursor-text {
+	@apply h-8 bg-black border-black;
+}
+
+/* Ensure large cursor doesn't change height on text cursor */
+.cursor-text.cursor:not(.cursor-hover):not(.cursor-clicked) {
+	@apply h-10;
+}
+
+.cursor-input-hover {
+	@apply scale-[1.2]; /* Scale the cursor to 120% */
+}
+
+/* Hide default cursor globally */
+:global(body) {
+	@apply cursor-none;
+}
+
+/* Disable custom cursor on touch devices */
+@media (pointer: coarse) {
+	:global(.cursor) {
+		@apply hidden;
+	}
+	:global(body) {
+		@apply cursor-auto;
+	}
+}
+
+/* For Firefox */
+.element {
+  scrollbar-width: none;
+}
+
+/* For Chrome, Safari, and other WebKit browsers */
+.element::-webkit-scrollbar {
+  display: none;
+}

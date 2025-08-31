@@ -7,10 +7,12 @@
   let videoSection: HTMLDivElement | null = null;
   let videoWrapper: HTMLDivElement | null = null;
   let video: HTMLIFrameElement | null = null;
+  let button: HTMLAnchorElement | null = null;
 
   let isScrolling = false;
+  let isButtonVisible = true; // Reactive variable to control button visibility
   
-  export let scaleDuration: number = 2; // Scroll distance for scaling (0.5 = half viewport height)
+  export let scaleDuration: number = 1.5; // Scroll distance for scaling (0.5 = half viewport height)
 
   function animateVideo() {
     if (!videoSection || !video || !videoWrapper) {
@@ -21,19 +23,22 @@
     const wrapperTop: number = videoWrapper.getBoundingClientRect().top;
     const innerHeight: number = window.innerHeight;
     const sectionTop: number = videoSection.getBoundingClientRect().top;
+    const sectionBottom: number = videoSection.getBoundingClientRect().bottom;
     let scale: number;
 
     // Start scaling when videowrapper is sticky (top ≤ 0)
     if (wrapperTop <= 0) {
-      // Calculate scroll distance since wrapper became sticky
       const scrollSinceSticky: number = Math.max(0, innerHeight - sectionTop);
-      const scalePixels = scaleDuration * innerHeight; // e.g., 0.5 * innerHeight
-      scale = Math.min(1, 0.5 + (scrollSinceSticky / scalePixels) * (1 - 0.5)); // Scale from 0.5 to 1
+      const scalePixels = scaleDuration * innerHeight;
+      scale = Math.min(1, 0.5 + (scrollSinceSticky / scalePixels) * (1 - 0.5));
     } else {
-      scale = 0.5; // Before sticky, stay at 0.5
+      scale = 0.5;
     }
 
-    console.log({ wrapperTop, sectionTop, innerHeight, scale }); // Debug values
+    // Update button visibility based on videosection's position
+    isButtonVisible = sectionTop < innerHeight && sectionBottom > 0;
+
+    console.log({ wrapperTop, sectionTop, sectionBottom, innerHeight, scale, isButtonVisible });
 
     video.style.transform = `scale(${scale})`;
 
@@ -54,8 +59,8 @@
     // Set CSS custom property for aspect ratio
     document.documentElement.style.setProperty('--aspect-ratio', aspectRatio.toString());
 
-    console.log('Mounted:', { videoSection, videoWrapper, video });
-    animateVideo(); // Initial scale
+    console.log('Mounted:', { videoSection, videoWrapper, video, button });
+    animateVideo(); // Initial scale and visibility check
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -64,10 +69,10 @@
   });
 </script>
 
-<div class="mt-[-15%] mb-[15%] videosection flex justify-center min-h-[200vh]" bind:this={videoSection}>
-  <div class="videowrapper sticky top-[0px] w-full h-[100vh]" bind:this={videoWrapper}>
+<div class="relative min-h-[200vh] videosection flex justify-center z-[10]" bind:this={videoSection}>
+  <div class="videowrapper sticky top-0 w-full h-[100vh]" bind:this={videoWrapper}>
     <iframe
-      class="absolute w-[calc(100vh*var(--aspect-ratio,1.777))] h-full object-cover will-change-transform"
+      class="absolute w-[calc(100vh*var(--aspect-ratio,1.777))] h-full object-cover will-change-transform z-0"
       bind:this={video}
       src="https://player.vimeo.com/video/VIDEO_ID"
       title="Video title"
@@ -75,23 +80,27 @@
       allow="autoplay; fullscreen; picture-in-picture"
       allowfullscreen
     ></iframe>
-    <div class="absolute mt-[15%] mb-[-40%] translate-y-[-50%]">
-      <a href="../../../offers/strategy-call" class="mt-5 inline-flex items-center justify-center p-5 text-5xl font-black text-text-white rounded-0 bg-accent hover:text-text-dark hover:bg-medium">                  
-        <span class="italic w-full my-10 mx-70 z-10">
-          BOOK FREE STRATEGY CALL
-        </span>
-      </a>
-      <div class="absolute rounded-full border-2 border-medium inset-0 m-auto w-42 h-42 animate-ping z-[-1]"></div>
-      <div class="absolute rounded-full border-2 border-medium inset-0 m-auto w-84 h-84 animate-ping z-[-1]"></div>
-      <div class="absolute rounded-full border-2 border-medium inset-0 m-auto w-168 h-168 animate-ping z-[-1]"></div>
-      <div class="absolute rounded-full border-2 border-medium inset-0 m-auto w-168 h-168 animate-ping z-[-1]"></div>      
-    </div>    
+    <!-- Animated ping elements -->
+    <div class="absolute inset-0 mb-0">
+    </div>
   </div>
+  <!-- Button positioned at bottom center of videosection -->
+  <a
+    href="../../../offers/strategy-call"
+    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center p-5 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
+    class:hidden={!isButtonVisible}
+    bind:this={button}
+  >
+    <span class="italic w-full my-5 mx-30">
+      BOOK FREE STRATEGY CALL
+    </span>
+  </a>
 </div>
 
 <style>
   .videosection {
     min-height: 200vh; /* Scrollable content */
+    position: relative; /* Ensure absolute positioning is relative to this */
   }
 
   .videowrapper {
@@ -108,5 +117,14 @@
   iframe {
     transform-origin: center center;
     transition: transform 0.2s ease; /* Smooth scaling */
+  }
+
+  /* Hide scrollbar */
+  .videosection {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .videosection::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 </style>
