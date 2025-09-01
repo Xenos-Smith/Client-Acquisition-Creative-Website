@@ -130,7 +130,7 @@
                 </div>
                 <P class="text-md max-w-screen-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, earum molestias quasi nulla accusantium, illum tenetur quas, pariatur aperiam sapiente beatae unde sed. Distinctio rerum, ab alias nam magnam cupiditate.</P>
             </div>
-            {/if} 
+            {/if} <!--just a test-->
             <a
                 href="../../../offers/strategy-call"
                 class="rounded-t-[10px] custom absolute bottom-[-43px] left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
