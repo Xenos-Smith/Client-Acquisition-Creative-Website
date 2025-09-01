@@ -1,4 +1,4 @@
-<script>
+<!--<script>
   import * as rive from '@rive-app/canvas';
   import { onMount } from 'svelte';
 
@@ -31,4 +31,4 @@
   });
 </script>
 
-<canvas id={canvasId} bind:this={canvasElement} class="w-[640px] h-[360px] z-[-10]"></canvas>
+<canvas id={canvasId} bind:this={canvasElement} class="w-[640px] h-[360px] z-[-1]"></canvas>

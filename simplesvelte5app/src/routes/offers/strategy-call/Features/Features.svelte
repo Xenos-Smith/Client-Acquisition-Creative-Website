@@ -1,4 +1,4 @@
-<script lang="ts">
+<!--<script lang="ts">
     import '$lib/../app.css';
     import { Heading, P, Mark } from "flowbite-svelte";
     import { onMount } from 'svelte';
@@ -103,8 +103,8 @@
 
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
     <div class="sticky h-[100vh] top-0 z-10 flex">
-        <div class="absolute w-full flex justify-end items-end h-0">  
-            <div class="absolute mt-[70%] w-1/2"><Carousel /></div>
+        <div class="absolute w-full h-full flex justify-end items-end">  
+            <div class="absolute"><Carousel /></div>
         </div>
         <div class="p-8 pt-18 text-left justify-start items-start flex flex-col">
             {#if progress < 1}

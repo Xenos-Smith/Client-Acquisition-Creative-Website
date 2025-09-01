@@ -1,4 +1,4 @@
-<script lang="ts">
+<!--<script lang="ts">
   import RiveFile from './RiveFile.svelte';
   import { onMount } from 'svelte';
 
@@ -64,16 +64,14 @@
   });
 </script>
 
-<div id="scroll-carousel" class="absolute inset-0 w-[50vw] h-[100vh] z-[-1] overflow-y-auto snap-y snap-mandatory" data-carousel="static">
+<div id="scroll-carousel" class="mt-[80vh] absolute h-[100vh] z-[-1] transform -translate-[100%] shadow-xl" data-carousel="static">
   <div class="relative h-full">
-    <div id="carousel-item-1" class="hidden duration-700 ease-in-out snap-start" data-carousel-item="active" style="height: 100vh;">
-      <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/roadmap.riv" canvasId="rive-canvas-1" />
-      </div>
+    <div id="carousel-item-1" class="w-full h-full min-w-[300px] hidden duration-700 ease-in-out snap-start" data-carousel-item="active">
+      <RiveFile src="/strategy-call/roadmap.riv" canvasId="rive-canvas-1" />
     </div>
     <div id="carousel-item-2" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <!-- Placeholder path; update with actual .riv file -->
+        <!-- Placeholder path; update with actual .riv file
         <RiveFile src="/strategy-call/placeholder.riv" canvasId="rive-canvas-2" />
       </div>
     </div>
@@ -123,28 +121,28 @@
       </div>
     </div>
     <div id="carousel-item-12" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-13" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-14" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-15" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-16" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-17" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-18" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
     <div id="carousel-item-19" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
-      <!-- Empty placeholder -->
+      <!-- Empty placeholder
     </div>
   </div>
 </div>

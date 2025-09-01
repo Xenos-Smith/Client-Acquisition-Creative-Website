@@ -17,7 +17,17 @@
       <Mark class="bg-medium text-accent p-3">“Book-&-Grow”</Mark> 30-min “filled-to-the-brim” marketing advice: <Mark class="bg-transparent italic text-accent p-3 z-[-10]">A personal trainer’s guide to <span class="underline uppercase">stability</span> and <span class="underline uppercase">growth.</span></Mark>
     </Heading>        
     <P class="text-center text-text-dark text-xl">Pure marketing tactics personally for you - all the way through.</P>
-    <CustomVideo />
+    <div class="w-full flex justify-center">  
+      <a
+        href="#"
+        class="bottom-4 inline-flex items-center justify-center p-5 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
+      >
+        <span class="italic w-full my-5 mx-30">
+          BOOK FREE STRATEGY CALL
+        </span>
+      </a>
+    </div>
+    <!--<CustomVideo />-->
     <div class="flex h-3xl gap-3">
       <svg viewBox="0 0 284 211" width="47.3333333333" height="52.7535.1666666667" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M56.5371 0L0 211H227.463L284 0H56.5371Z" fill="#0D3B66"/>
