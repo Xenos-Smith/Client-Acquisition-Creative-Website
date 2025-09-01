@@ -4,6 +4,7 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
+    import Carousel from './Carousel.svelte';
 
     // Define runes
     let scrollY = $state(0); //the current y axis scroll
@@ -100,15 +101,12 @@
     }
 </style>
 
+<Carousel />
+
+<!--
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
     <div class="sticky h-[100vh] top-0 z-10">
-        <!--<div class="absolute bg-fixed h-[100%] top-0">
-            <div class="w-[10vw] h-[100%] bg-black">
-                
-            </div>
-        </div>-->
         <div class="p-8 pt-18 text-left justify-left items-top flex flex-col">
-            <!-- First element: visible when progress < 1 (first 100vh) -->
             {#if progress < 1}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
@@ -125,7 +123,7 @@
                 </div>
                 <P class="text-md max-w-screen-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, earum molestias quasi nulla accusantium, illum tenetur quas, pariatur aperiam sapiente beatae unde sed. Distinctio rerum, ab alias nam magnam cupiditate.</P>
             </div>
-            {/if} <!--just a test-->
+            {/if} 
             <a
                 href="../../../offers/strategy-call"
                 class="rounded-t-[10px] custom absolute bottom-[-43px] left-1/2 transform -translate-x-1/2 translate-[-50%] inline-flex items-center justify-center p-1 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
@@ -391,4 +389,4 @@
             {/if}
         </div>
     </div>
-</section>
+</section>-->

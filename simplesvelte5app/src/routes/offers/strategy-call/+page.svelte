@@ -8,4 +8,3 @@
 <Hero />
 <WhatIsThis />
 <Features />
-<RiveFile src="/strategy-call/sales_page.riv" canvasId="rive-canvas-9" />
