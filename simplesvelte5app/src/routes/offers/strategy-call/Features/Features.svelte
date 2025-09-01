@@ -1,20 +1,18 @@
 <script lang="ts">
     import '$lib/../app.css';
-    import * as rive from '@rive-app/canvas';
     import { Heading, P, Mark } from "flowbite-svelte";
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
-    import Carousel from './Carousel.svelte';
 
     // Define runes
-    let scrollY = $state(0);
-    let offsetTop = $state(0);
-    let innerHeight = $state(0);
+    let scrollY = $state(0); //the current y axis scroll
+    let offsetTop = $state(0); //the ofset from the top of the mother container
+    let innerHeight = $state(0); // The height of the container for the content
     let sectionRef: HTMLElement | null = null; // Changed from HTMLSectionElement to HTMLElement
 
     // Derived progress (in vh units scrolled into the section)
-    let progress = $derived(Math.max(0, (scrollY - offsetTop) / innerHeight));
+    let progress = $derived(Math.max(0, (scrollY - offsetTop) / innerHeight)); //the progress towards the end of the mother container
 
     // Update on mount and scroll
     onMount(() => {
@@ -25,7 +23,6 @@
 
         const handleScroll = () => {
             scrollY = window.scrollY;
-            console.log('scrollY:', scrollY, 'progress:', progress); // Debug
         };
 
         const handleResize = () => {
@@ -37,7 +34,6 @@
 
         // Set initial values
         scrollY = window.scrollY;
-        console.log('Initial scrollY:', scrollY, 'offsetTop:', offsetTop, 'progress:', progress);
 
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
@@ -106,18 +102,17 @@
 
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
     <div class="sticky h-[100vh] top-0 z-10">
-        <div class="absolute bg-fixed h-[100%] top-0">
+        <!--<div class="absolute bg-fixed h-[100%] top-0">
             <div class="w-[10vw] h-[100%] bg-black">
                 
             </div>
-        </div>
+        </div>-->
         <div class="p-8 pt-18 text-left justify-left items-top flex flex-col">
             <!-- First element: visible when progress < 1 (first 100vh) -->
             {#if progress < 1}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -142,26 +137,24 @@
             {#if progress >= 1 && progress < 2}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
                     <Heading tag="h1" class="text-5xl font-black max-w-screen-xl">
-                        Everything for you to grow.
+                        Temporary text.
                     </Heading>
                     <P class="text-text-dark text-xl max-w-screen-md">
                         (Personally for you)
                     </P>
                 </div>
-                <P class="text-md max-w-screen-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, earum molestias quasi nulla accusantium, illum tenetur quas, pariatur aperiam sapiente beatae unde sed. Distinctio rerum, ab alias nam magnam cupiditate.</P>
+                <P class="text-md max-w-screen-md">Lestias quasi nulla accusantium, illum tenetur quas, pariatur aperiam sapiente beatae unde sed. Distinctio rerum, ab alias nam magnam cupiditate.</P>
             </div>
             {/if}
             {#if progress >= 2 && progress < 3}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -178,8 +171,7 @@
             {#if progress >= 3 && progress < 4}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -196,8 +188,7 @@
             {#if progress >= 4 && progress < 5}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -214,8 +205,7 @@
             {#if progress >= 5 && progress < 6}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -232,8 +222,7 @@
             {#if progress >= 6 && progress < 7}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -250,8 +239,7 @@
             {#if progress >= 7 && progress < 8}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -268,8 +256,7 @@
             {#if progress >= 8 && progress < 9}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -286,8 +273,7 @@
             {#if progress >= 9 && progress < 10}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -304,8 +290,7 @@
             {#if progress >= 10 && progress < 11}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -322,8 +307,7 @@
             {#if progress >= 11 && progress < 12}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -340,8 +324,7 @@
             {#if progress >= 12 && progress < 13}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -358,8 +341,7 @@
             {#if progress >= 13 && progress < 14}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -376,8 +358,7 @@
             {#if progress >= 14 && progress < 15}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
@@ -394,8 +375,7 @@
             {#if progress >= 15}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
-                in:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
-                out:fly={{ y: -50, duration: 300, opacity: 0, easing: cubicOut }}
+                transition:fly={{ y: 50, duration: 300, opacity: 0, easing: cubicOut }}
             >
                 <div>
                     <P class="text-text-dark text-xl max-w-screen-md">We'll cover...</P>
