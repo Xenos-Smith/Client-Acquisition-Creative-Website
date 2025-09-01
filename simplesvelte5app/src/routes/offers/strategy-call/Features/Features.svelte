@@ -101,13 +101,11 @@
     }
 </style>
 
-<div class="relative">  
-    <Carousel />
-</div>
-
-<!--
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
     <div class="sticky h-[100vh] top-0 z-10">
+        <div class="relative flex justify-right">  
+            <Carousel />
+        </div>
         <div class="p-8 pt-18 text-left justify-left items-top flex flex-col">
             {#if progress < 1}
             <div
