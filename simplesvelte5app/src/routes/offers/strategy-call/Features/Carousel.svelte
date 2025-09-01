@@ -64,58 +64,58 @@
   <div class="relative h-full">
     <div id="carousel-item-1" class="hidden duration-700 ease-in-out snap-start" data-carousel-item="active" style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/roadmap.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-1" />
+        <RiveFile src="/strategy-call/roadmap.riv" canvasId="rive-canvas-1" />
       </div>
     </div>
     <div id="carousel-item-2" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
         <!-- Placeholder path; update with actual .riv file -->
-        <RiveFile src="/strategy-call/placeholder.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-2" />
+        <RiveFile src="/strategy-call/placeholder.riv" canvasId="rive-canvas-2" />
       </div>
     </div>
     <div id="carousel-item-3" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/research_&_pools.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-3" />
+        <RiveFile src="/strategy-call/research_&_pools.riv" canvasId="rive-canvas-3" />
       </div>
     </div>
     <div id="carousel-item-4" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/upsells,_downsells,_cross-sells.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-4" />
+        <RiveFile src="/strategy-call/upsells,_downsells,_cross-sells.riv" canvasId="rive-canvas-4" />
       </div>
     </div>
     <div id="carousel-item-5" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/organic_content.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-5" />
+        <RiveFile src="/strategy-call/organic_content.riv" canvasId="rive-canvas-5" />
       </div>
     </div>
     <div id="carousel-item-6" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/opt-in.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-6" />
+        <RiveFile src="/strategy-call/opt-in.riv" canvasId="rive-canvas-6" />
       </div>
     </div>
     <div id="carousel-item-7" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/email_1.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-7" />
+        <RiveFile src="/strategy-call/email_1.riv" canvasId="rive-canvas-7" />
       </div>
     </div>
     <div id="carousel-item-8" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/sms.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-8" />
+        <RiveFile src="/strategy-call/sms.riv" canvasId="rive-canvas-8" />
       </div>
     </div>
     <div id="carousel-item-9" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/sales_page.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-9" />
+        <RiveFile src="/strategy-call/sales_page.riv" canvasId="rive-canvas-9" />
       </div>
     </div>
     <div id="carousel-item-10" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/lead_nurture.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-10" />
+        <RiveFile src="/strategy-call/lead_nurture.riv" canvasId="rive-canvas-10" />
       </div>
     </div>
     <div id="carousel-item-11" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
-        <RiveFile src="/strategy-call/retention.riv" autoplay={true} stateMachines="loop" canvasId="rive-canvas-11" />
+        <RiveFile src="/strategy-call/retention.riv" canvasId="rive-canvas-11" />
       </div>
     </div>
     <div id="carousel-item-12" class="hidden duration-700 ease-in-out snap-start" data-carousel-item style="height: 100vh;">

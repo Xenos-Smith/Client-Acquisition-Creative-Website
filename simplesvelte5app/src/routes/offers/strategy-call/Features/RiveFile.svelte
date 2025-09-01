@@ -20,6 +20,20 @@
       },
     });
 
+    const riveInstance = new rive.Rive({
+        src: "$lib/assets/strategy-call/roadmap.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("canvas"),
+        autoplay,
+        // artboard: "Artboard", // Optional. If not supplied the default is selected
+        stateMachines,
+        canvasId,
+        onLoad: () => {
+          riveInstance.resizeDrawingSurfaceToCanvas();
+        },
+      });
+
     // Cleanup on component destruction
     return () => r.cleanup();
   });
