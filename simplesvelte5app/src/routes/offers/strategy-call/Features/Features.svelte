@@ -102,11 +102,11 @@
 </style>
 
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">
-    <div class="sticky h-[100vh] top-0 z-10">
-        <div class="relative flex justify-right">  
-            <Carousel />
+    <div class="sticky h-[100vh] top-0 z-10 flex">
+        <div class="absolute w-full flex justify-end items-end h-0">  
+            <div class="absolute mt-[70%] w-1/2"><Carousel /></div>
         </div>
-        <div class="p-8 pt-18 text-left justify-left items-top flex flex-col">
+        <div class="p-8 pt-18 text-left justify-start items-start flex flex-col">
             {#if progress < 1}
             <div
                 class="absolute max-w-screen-xl z-10 flex flex-col gap-15"
