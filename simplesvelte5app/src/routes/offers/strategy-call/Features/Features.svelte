@@ -101,7 +101,9 @@
     }
 </style>
 
-<Carousel />
+<div class="relative">  
+    <Carousel />
+</div>
 
 <!--
 <section bind:this={sectionRef} class="w-[96vw] h-[1600vh] m-10">

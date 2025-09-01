@@ -64,7 +64,7 @@
   });
 </script>
 
-<div id="scroll-carousel" class="absolute inset-0 w-[50vw] h-[100vh] z-0 overflow-y-auto snap-y snap-mandatory" data-carousel="static">
+<div id="scroll-carousel" class="absolute inset-0 w-[50vw] h-[100vh] z-[-1] overflow-y-auto snap-y snap-mandatory" data-carousel="static">
   <div class="relative h-full">
     <div id="carousel-item-1" class="hidden duration-700 ease-in-out snap-start" data-carousel-item="active" style="height: 100vh;">
       <div style="width: 100%; height: 100%;">
