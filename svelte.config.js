@@ -4,23 +4,23 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: ['.svelte', '.md'], // Support .md files
+  extensions: ['.svelte', '.md'],
   preprocess: [
     vitePreprocess(),
-    mdsvex({
-      extensions: ['.md']
-    })
+    mdsvex({ extensions: ['.md'] })
   ],
   kit: {
     adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: null, // Fully static site
-      precompress: false
+      pages: 'build', // Output directory for HTML files
+      assets: 'build', // Output directory for assets (JS, CSS, etc.)
+      fallback: null, // No SPA fallback (not needed for fully static sites)
+      precompress: false, // Set to true if you want compressed files
+      strict: true // Fail the build if prerendering fails
     }),
+    trailingSlash: 'always', // Enforce trailing slashes for URLs
     prerender: {
       entries: [
-        '*', // Prerender all static routes
+        '*', // Prerender all discoverable routes
         '/Trainings/tool-videos/business-model-problems',
         '/Trainings/tool-videos/getting-more-affiliates',
         '/Trainings/tool-videos/getting-more-leads-per-month',
@@ -33,9 +33,8 @@ const config = {
         '/Trainings/tool-videos/increasing-call-show-up-rate',
         '/Trainings/tool-videos/increasing-close-rate',
         '/Trainings/tool-videos/increasing-prospect-retention'
-        // Excluding /Trainings/warmup-videos/[slug] as requested
       ],
-      crawl: true // Discover static routes
+      crawl: true // Automatically discover routes
     }
   }
 };

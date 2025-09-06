@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../../app.css';
+	import '$lib/../app.css';
 	import alienInvasion from '$lib/assets/series/alien_invasion.jpg';
 
     let form_id = $state("myzdpobr")
