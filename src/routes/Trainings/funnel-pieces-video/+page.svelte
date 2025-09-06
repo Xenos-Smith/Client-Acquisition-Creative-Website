@@ -11,13 +11,13 @@
 
 <div class="w-full container grid justify-items-stretch grid-flow-col grid-rows-2 gap-4">
     <a
-      href="/pdfs/sales-page-guide"
+      href="/pdfs/scripts/sales-page-checklist.pdf"
       class="flex justify-center bg-medium p-3 text-xl font-bold"
     >
       Sales Page Guide
     </a>
     <a
-      href="/pdfs/funnel-pieces-video-script"
+      href="/pdfs/scripts/lego-piece-funnel.pdf"
       class="flex justify-center bg-medium p-3 text-xl font-bold"
     >
       Script

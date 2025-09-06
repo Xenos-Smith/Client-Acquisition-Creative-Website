@@ -7,6 +7,7 @@
 	import CustomCursor from './CustomCursor.svelte';
 
 	let { children } = $props();
+
 </script>
 
 <svelte:head>

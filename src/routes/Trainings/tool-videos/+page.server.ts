@@ -1,1 +1,0 @@
-//redirect from the video series to the first video

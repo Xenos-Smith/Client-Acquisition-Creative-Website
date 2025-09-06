@@ -11,7 +11,7 @@
         resources: [
             { name: "Alex's Stuff", url: "https://www.acquisition.com/training/money/context" },
             { name: "Funnel Example", url: "https://www.figma.com/board/lY9SsSUuycjujEbiVKhks4/Example-Funnel?node-id=0-1&t=ft8EyS6fRXfKNNZg-1" },
-            { name: "Video Script", url: "/pdfs/scripts/scripts/biz-model-problems.pdf" },
+            { name: "Video Script", url: "/pdfs/scripts/biz-model-problems.pdf" },
         ],
         },
         {
@@ -27,7 +27,7 @@
         title: "Getting More Leads Per Month",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
+            { name: "Got Biz Vid", url: "/Trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/monthly-leads.pdf" },
         ],
         },
@@ -44,7 +44,7 @@
         title: "Why You Should Have a Post Opt-In Sale...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
+            { name: "Got Biz Vid", url: "/Trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/sale-after-optin.pdf" },
         ],
         },
@@ -53,7 +53,7 @@
         title: "Email Marketing Problems...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Pieces Vid", url: "/trainings/funnel-pieces-video" },
+            { name: "Pieces Vid", url: "/Trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/email-problems.pdf" },
         ],
         },
@@ -62,7 +62,7 @@
         title: "Sales Page Problems?",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Sales Page Guide", url: "/pdfs/scripts/sales-page-guide.pdf" },
+            { name: "Sales Page Guide", url: "/pdfs/scripts/sales-page-checklist.pdf" },
             { name: "Video Script", url: "/pdfs/scripts/sales-page.pdf" },
         ],
         },
@@ -71,7 +71,7 @@
         title: "Decreasing Email Warmup Unsubscribe Percentage...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
+            { name: "+Sequences", url: "/Trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/email-unsub.pdf" },
         ],
         },
@@ -80,7 +80,7 @@
         title: "SMS Marketing Problems...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
+            { name: "+Sequences", url: "/Trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/sms-marketing.pdf" },
         ],
         },
@@ -89,7 +89,7 @@
         title: "Increasing Call Show Up Rate...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "+Sequences", url: "/trainings/funnel-pieces-video" },
+            { name: "+Sequences", url: "/Trainings/funnel-pieces-video" },
             { name: "Video Script", url: "/pdfs/scripts/show-ups.pdf" },
         ],
         },
@@ -106,7 +106,7 @@
         title: "Increasing Prospect Retention...",
         videoUrl: "https://youtube.com/embed/anotherVideoId",
         resources: [
-            { name: "Got Biz Vid", url: "/trainings/tool-videos/business-model-problems" },
+            { name: "Got Biz Vid", url: "/Trainings/tool-videos/business-model-problems" },
             { name: "Video Script", url: "/pdfs/scripts/prospect-retention.pdf" },
         ],
         },

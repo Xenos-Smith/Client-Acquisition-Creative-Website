@@ -4,22 +4,38 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: ['.svelte', '.md'], // Add .md to the list of extensions
+  extensions: ['.svelte', '.md'], // Support .md files
   preprocess: [
     vitePreprocess(),
     mdsvex({
-      extensions: ['.md'] // Tell mdsvex to process .md files
+      extensions: ['.md']
     })
   ],
   kit: {
     adapter: adapter({
-      pages: 'build', // Output directory for static files
-      assets: 'build', // Directory for assets
-      fallback: 'index.html', // Enable SPA routing for client-side navigation
-      precompress: true // Compress files for better performance
+      pages: 'build',
+      assets: 'build',
+      fallback: null, // Fully static site
+      precompress: false
     }),
     prerender: {
-      handleMissingId: 'ignore' // Ignore missing dynamic route IDs during prerendering
+      entries: [
+        '*', // Prerender all static routes
+        '/Trainings/tool-videos/business-model-problems',
+        '/Trainings/tool-videos/getting-more-affiliates',
+        '/Trainings/tool-videos/getting-more-leads-per-month',
+        '/Trainings/tool-videos/increase-lead-magnet-conversions',
+        '/Trainings/tool-videos/why-you-should-have-a-post-opt-in-sale',
+        '/Trainings/tool-videos/email-marketing-problems',
+        '/Trainings/tool-videos/sales-page-problems',
+        '/Trainings/tool-videos/decreasing-email-warmup-unsubscribe-percentage',
+        '/Trainings/tool-videos/sms-marketing-problems',
+        '/Trainings/tool-videos/increasing-call-show-up-rate',
+        '/Trainings/tool-videos/increasing-close-rate',
+        '/Trainings/tool-videos/increasing-prospect-retention'
+        // Excluding /Trainings/warmup-videos/[slug] as requested
+      ],
+      crawl: true // Discover static routes
     }
   }
 };
