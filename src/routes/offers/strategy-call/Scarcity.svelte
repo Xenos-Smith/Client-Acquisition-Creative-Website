@@ -19,4 +19,3 @@
     <P class="text-text-white text-md max-w-screen-md w-full text-left">This is also why we won't try to sell you on the call... we don't have the time (too many resources) and we have high demand for that spot.</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">Yes, we do expect to get clients through the strategy call, but again, because of demand, we don't have to sell that much.</P>
 </div>
-

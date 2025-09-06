@@ -184,10 +184,11 @@
     </div>
 
     <a
-        href="/offers/strategy-call"
-        class="sticky bottom-[0px] custom left-1/2 -translate-x-1/2 inline-flex items-center justify-center p-1 text-3xl font-black text-text-white bg-accent hover:text-text-dark hover:bg-medium z-20 rounded-t-[10px]"
+        href="https://calendly.com/goncalogoncalves/strategy-call"
+        class="sticky bottom-[0px] custom left-1/2 -translate-x-1/2 inline-flex items-center justify-center p-1 text-3xl font-black text-text-white bg-accent hover:text-text-dark hover:bg-medium z-20 rounded-t-[10px]  w-full max-w-screen-md"
+        target="_blank" rel="noopener noreferrer"
     >
-        <span class="italic w-full py-5 px-8">
+        <span class="italic w-full py-5 text-center">
             BOOK FREE STRATEGY CALL
         </span>
     </a>

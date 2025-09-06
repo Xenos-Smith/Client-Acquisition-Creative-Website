@@ -86,10 +86,11 @@
   </div>
   <!-- Button positioned at bottom center of videosection -->
   <a
-    href="../../../offers/strategy-call"
+    href="https://calendly.com/goncalogoncalves/strategy-call"
     class="absolute bottom-4 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center p-5 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
     class:hidden={!isButtonVisible}
     bind:this={button}
+    target="_blank" rel="noopener noreferrer"
   >
     <span class="italic w-full my-5 mx-30">
       BOOK FREE STRATEGY CALL

@@ -19,10 +19,11 @@
     <P class="text-center text-text-dark text-xl">Pure marketing tactics personally for you - all the way through.</P>
     <div class="w-full flex justify-center">  
       <a
-        href="#"
-        class="bottom-4 inline-flex items-center justify-center p-5 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20"
+        href="https://calendly.com/goncalogoncalves/strategy-call"
+        class="bottom-4 inline-flex items-center justify-center p-5 text-3xl font-black text-text-white rounded-none bg-accent hover:text-text-dark hover:bg-medium z-20 w-full max-w-screen-md"
+        target="_blank" rel="noopener noreferrer"
       >
-        <span class="italic w-full my-5 mx-30">
+        <span class="italic w-full my-5 text-center">
           BOOK FREE STRATEGY CALL
         </span>
       </a>
