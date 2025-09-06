@@ -62,6 +62,7 @@
 		}
 	}
 
+	/*
 	// Handle hover states for .hoverable elements
 	function handleMouseEnter(event: MouseEvent) {
 		state.isHovering = true;
@@ -70,7 +71,9 @@
 	function handleMouseLeave(event: MouseEvent) {
 		state.isHovering = false;
 	}
+	*/
 
+	/*
 	// Handle click animation
 	function handleClick(event: MouseEvent) {
 		state.isClicked = true;
@@ -78,6 +81,7 @@
 			state.isClicked = false;
 		}, 200);
 	}
+	*/
 
 	// Set up event listeners and animation loop
 	onMount(() => {
@@ -128,17 +132,13 @@
 <!-- Small cursor (dot, follows mouse directly) -->
 <div
 	class="cursor fixed w-2 h-2 rounded-full bg-black z-[10000] translate-x-[-50%] translate-y-[-50%] pointer-events-none"
-	class:cursor-hover={state.isHovering}
 	class:cursor-clicked={state.isClicked}
-	class:cursor-text={state.isTextCursor}
 	style="transform: translate({state.smallX}px, {state.smallY}px);"
 ></div>
 
 <!-- Large cursor (smoothed, 10x larger) -->
 <div
     class="cursor fixed w-10 h-10 rounded-full border-2 border-black bg-transparent z-[9999] translate-x-[-50%] translate-y-[-50%] pointer-events-none"
-    class:cursor-hover={state.isHovering}
     class:cursor-clicked={state.isClicked}
-    class:cursor-text={state.isTextCursor}
-    class:cursor-input-hover={state.isInputHovering} style="transform: translate({state.largeX}px, {state.largeY}px);"
+    style="transform: translate({state.largeX}px, {state.largeY}px);"
 ></div>
