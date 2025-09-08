@@ -11,10 +11,10 @@
     <P class="text-text-white text-xl max-w-screen-md text-center w-full mb-5">
         And we don't know when we'll be available again...
     </P>
-    <P class="text-text-white text-md max-w-screen-md w-full text-left">Why won't web be available again? Read the next section</P>
+    <P class="text-text-white text-md max-w-screen-md w-full text-left">Why won't we be available again? Read the next section</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">We're very new on the industry...</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">(our website is still under development, can you see the skeletoid structure of this website?)</P>
-    <P class="text-text-white text-md max-w-screen-md w-full text-left">We wanted to say that upfront, because we understand the decision is though.</P>
+    <P class="text-text-white text-md max-w-screen-md w-full text-left">We wanted to say that upfront, because we understand the decision is tough.</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">And because we want to provide the best service possible, if you wanna take on our offer... we can only handle 1 spot.</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">This is also why we won't try to sell you on the call... we don't have the time (too many resources) and we have high demand for that spot.</P>
     <P class="text-text-white text-md max-w-screen-md w-full text-left">Yes, we do expect to get clients through the strategy call, but again, because of demand, we don't have to sell that much.</P>

@@ -23,9 +23,7 @@
 		class="z-10 m-[50px] flex max-w-[900px] flex-col items-center justify-center gap-4 bg-white/30 p-[50px] backdrop-blur-lg"
 	>
 		<p class="text-base">
-			Disclaimer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae pariatur
-			quis voluptatem, dignissimos laborum necessitatibus assumenda. Eligendi, rerum a velit officia
-			sunt, mollitia adipisci numquam culpa, voluptatum ratione in.
+			The business advice on this website is for general informational purposes only and is not a substitute for professional consultation. We strive for accuracy but make no guarantees regarding the completeness, reliability, or suitability of the information for your specific circumstances. Any actions or inaction based on this advice are at your own risk, and we are not liable for any resulting loss or damage. This site may link to external websites we do not control, and we are not responsible for their content or availability. For more details, please review our Terms and Conditions, Privacy Policy, Cookie Policy, Accessibility Statement, and <a href="https://www.termsfeed.com/live/f85975b3-6778-4e23-9017-0d5bdc023ce3">Disclaimer Policy</a>.
 		</p>
 		<p class="color-legal-white text-xs">© 2025 by Client Acquisition Creative LLC</p>
 	</div>
